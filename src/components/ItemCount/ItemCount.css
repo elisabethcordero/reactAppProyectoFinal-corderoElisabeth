@@ -1,0 +1,10 @@
+.Controls{
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Button{
+    margin: 5px;
+}

@@ -1,0 +1,26 @@
+
+.ItemImg{
+    width: 250px;
+    height: 250px;
+}
+
+.ItemHeader{
+    margin: 5px;
+}
+
+.CardItem{
+    background-color:rgb(243, 243, 243);
+    width: 270px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Info {
+    margin: 5px;
+}
+
+.Option{
+    text-decoration: none;
+}
