@@ -18,19 +18,26 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar/>
-          <Routes>
-            <Route path="/" element={<ItemListContainer greeting = {''}/>} />
-            <Route path="categorias/:categoryId" element={<ItemListContainer/>} />
-            <Route path="item/:itemId" element={<ItemDetailContainer/>} />
-            <Route path='/cart' element={<Cart/>} />
-            <Route path= '/checkout' element={<Checkout/>} />
-            <Route path="*" element={<h1>Not Found!</h1>} />
-            <Route path="/initial-loading" element={<LoadProducts/>} />
-          </Routes>
+          <div className="p-12">
+            <Routes>
+              <Route path="/" element={<ItemListContainer greeting = {''}/>} />
+              <Route path="categorias/:categoryId" element={<ItemListContainer/>} />
+              <Route path="item/:itemId" element={<ItemDetailContainer/>} />
+              <Route path='/cart' element={<Cart/>} />
+              <Route path= '/checkout' element={<Checkout/>} />
+              <Route path="*" element={<h1>Not Found!</h1>} />
+              <Route path="/initial-loading" element={<LoadProducts/>} />
+            </Routes>
+          </div>
         </CartProvider>
       </BrowserRouter>
+      <footer className="bg-gray-200 py-4 text-center fixed bottom-0 w-full">
+  <p className="text-gray-600">© 2023 Inksumos. Todos los derechos reservados.</p>
+  </footer>
     </div>
   );
+ 
+
 }
 
 export default App;

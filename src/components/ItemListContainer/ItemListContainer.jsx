@@ -41,7 +41,11 @@ const ItemListContainer = ({greeting}) => {
                 ? <>Loading...</>
                 :<>
                     <h1>{greeting}</h1>
-                    <ItemList products={products}/>
+                    {products?.length > 0 
+                    
+                    ?<ItemList products={products}/>
+                    :<>No existen productos en esta categoria</>
+                    }
                 </>
             }
         </div>

@@ -29,7 +29,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className='ItemImg'/>
+                <img src={img} alt={name} className='scale-90'/>
             </picture>
             <section>
                 <p className='Info'>
@@ -39,13 +39,13 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
                     Descripcion: {description}
                 </p>
                 <p className='Info'>
-                    Precio: {price}
+                    Precio: ${price}
                 </p>
             </section>
             <footer className='ItemFooter'>
                 {
                     quantityAdded > 0
-                        ? (<Link to='/cart' className='Option'>Terminar compra</Link>)
+                        ? (<Link to='/cart' className='bg-green-500 text-white py-1 px-4 rounded hover:bg-green-600'>Terminar compra</Link>)
                         : (<ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>)
                 }
             </footer>

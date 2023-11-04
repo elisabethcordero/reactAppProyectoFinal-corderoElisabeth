@@ -4,7 +4,7 @@ import './ItemList.css'
 
 const ItemList = ({products}) => {
   return (
-    <div className="ListGroup">
+    <div className="ListGroup flex flex-wrap justify-center">
         { products?.map(product => <Item key={product.id} {...product} />) }
     </div>
   )

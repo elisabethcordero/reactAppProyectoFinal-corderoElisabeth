@@ -74,15 +74,21 @@ const Checkout = () => {
     }
 
     if(orderId) {
-        return <h1>El id de su orden es: {orderId}</h1>
+        return (
+        <>
+        <h1>Gracias por su compra!</h1>
+        <h2>El id de su orden es: {orderId}</h2>
+        <p>En unos minutos nos pondremos en contacto para coordinar la entrega de su pedido.</p>
+        </>
+        )
     }
 
     return (
-        <div>
-            <h1>Checkout</h1>
+        <>
             <CheckoutForm onConfirm={createOrder}/>
-        </div>
+        </>
     )
 }
 
 export default Checkout;
+        
